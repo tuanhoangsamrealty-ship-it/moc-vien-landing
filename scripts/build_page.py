@@ -34,17 +34,22 @@ def main():
                       trim_blocks=False, lstrip_blocks=False)
     env.filters["tojson"] = lambda v: json.dumps(v, ensure_ascii=False)
     c = render_strings(content, env, {"project": cfg["project"], "contact": cfg["contact"]})
-    img = {i["id"]: "assets/" + i["file"] for i in pr["images"]}
-
     out_dir = ROOT / cfg["build"]["output_dir"]
     (out_dir / "assets").mkdir(parents=True, exist_ok=True)
-    html = env.get_template(cfg["build"]["template"]).render(cfg=cfg, c=c, img=img)
-    (out_dir / "index.html").write_text(html, encoding="utf-8")
-
     copied = 0
     for f in WEB.glob("*"):
         if f.suffix.lower() in (".webp", ".jpg", ".png", ".svg"):
             shutil.copy2(f, out_dir / "assets" / f.name); copied += 1
+
+    import hashlib
+    def versioned(fname: str) -> str:
+        p = out_dir / "assets" / fname
+        h = hashlib.sha1(p.read_bytes()).hexdigest()[:8] if p.exists() else "1"
+        return f"assets/{fname}?v={h}"
+
+    img = {i["id"]: versioned(i["file"]) for i in pr["images"]}
+    html = env.get_template(cfg["build"]["template"]).render(cfg=cfg, c=c, img=img)
+    (out_dir / "index.html").write_text(html, encoding="utf-8")
     print(f"✓ Đã dựng {out_dir.relative_to(ROOT)}/index.html · {copied} ảnh trong {out_dir.relative_to(ROOT)}/assets/")
     return 0
 

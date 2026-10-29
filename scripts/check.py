@@ -19,8 +19,9 @@ def main():
     html = page.read_text(encoding="utf-8")
 
     for src in sorted(set(re.findall(r'(?:src|srcset|href)="(assets/[^"]+)"', html))):
-        if not (out / src).exists():
-            errs.append(f"Thiếu file {src}")
+        clean_src = src.split("?")[0]
+        if not (out / clean_src).exists():
+            errs.append(f"Thiếu file {clean_src}")
     for tag in re.findall(r"<img\b[^>]*>", html):
         if "alt=" not in tag:
             errs.append("Ảnh thiếu thuộc tính alt: " + tag[:80])

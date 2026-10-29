@@ -11,8 +11,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Allura&family=Manrope:wght@400;500;600&family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/hero.webp" media="(min-width: 768px)">
-<link rel="preload" as="image" href="assets/hero-m.webp" media="(max-width: 767px)">
+<link rel="preload" as="image" href="assets/hero.webp?v=e75d35dc" media="(min-width: 768px)">
+<link rel="preload" as="image" href="assets/hero-m.webp?v=198ae601" media="(max-width: 767px)">
 <style>
 :root{
   --espresso:#2A1F17; --espresso-2:#3A2E25; --footer:#32281F;
@@ -97,13 +97,13 @@ em.s, h2 em, h1 em{display:inline-block;font-family:var(--f-script);font-style:n
 .hero__features .ic{font-size:30px;color:var(--caramel)}
 @media (max-width:767px){
   .hero{height:100svh;min-height:680px;max-height:920px}
-  .hero__img img{object-position:58% 62%}
-  .hero__shade{background:linear-gradient(180deg,rgba(24,16,10,.86) 0%,rgba(24,16,10,.68) 32%,rgba(24,16,10,.32) 52%,rgba(24,16,10,.06) 72%,rgba(24,16,10,.48) 100%),linear-gradient(90deg,rgba(24,16,10,.45) 0%,rgba(24,16,10,0) 68%)}
-  .hero__content{justify-content:flex-start;padding-top:92px;padding-bottom:110px}
+  .hero__img img{object-position:68% 55%}
+  .hero__shade{background:linear-gradient(180deg,rgba(24,16,10,.65) 0%,rgba(24,16,10,.42) 38%,rgba(24,16,10,.16) 66%,rgba(24,16,10,.45) 100%),linear-gradient(90deg,rgba(24,16,10,.58) 0%,rgba(24,16,10,.18) 58%,rgba(24,16,10,0) 90%)}
+  .hero__content{justify-content:flex-start;padding-top:92px;padding-bottom:110px;text-shadow:0 2px 20px rgba(18,12,7,.45)}
   .hero__eyebrow{margin:0 0 10px;font-size:10.5px;letter-spacing:.18em}
   .hero__name{font-size:clamp(54px,15vw,82px)}
-  .hero__tagline{font-size:clamp(20px,4.8vw,24px);line-height:1.24;margin-top:10px;max-width:380px}
-  .hero__body{font-size:13.5px;line-height:1.62;margin:12px 0 22px;max-width:390px;color:rgba(243,236,228,.86)}
+  .hero__tagline{font-size:clamp(20px,4.8vw,24px);line-height:1.24;margin-top:10px;max-width:360px}
+  .hero__body{font-size:13.5px;line-height:1.62;margin:12px 0 22px;max-width:360px;color:rgba(243,236,228,.9)}
   .hero__features{display:none}
 }
 
@@ -291,8 +291,8 @@ em.s, h2 em, h1 em{display:inline-block;font-family:var(--f-script);font-style:n
 <section class="hero" aria-label="Mộc Viên">
   <div class="hero__img" id="heroImg">
     <picture>
-      <source media="(max-width: 767px)" srcset="assets/hero-m.webp">
-      <img src="assets/hero.webp" alt="Sảnh thông tầng với cầu thang xoắn gỗ sồi, nắng chiều chiếu qua vách kính nhìn ra rừng thông" width="2400" height="1350" fetchpriority="high">
+      <source media="(max-width: 767px)" srcset="assets/hero-m.webp?v=198ae601">
+      <img src="assets/hero.webp?v=e75d35dc" alt="Sảnh thông tầng với cầu thang xoắn gỗ sồi, nắng chiều chiếu qua vách kính nhìn ra rừng thông" width="2400" height="1350" fetchpriority="high">
     </picture>
   </div>
   <div class="hero__shade"></div>
@@ -315,7 +315,7 @@ em.s, h2 em, h1 em{display:inline-block;font-family:var(--f-script);font-style:n
 <section class="story" id="story" aria-labelledby="storyTitle">
   <div class="wrap">
     <div class="story__card" id="storyCard">
-      <div class="story__img" id="storyImg"><img src="assets/story-hands.webp" alt="Bàn tay nghệ nhân đang chà nhẵn đường cong của tay vịn gỗ sồi" width="1600" height="1200" loading="lazy" decoding="async"></div>
+      <div class="story__img" id="storyImg"><img src="assets/story-hands.webp?v=8a8aaded" alt="Bàn tay nghệ nhân đang chà nhẵn đường cong của tay vịn gỗ sồi" width="1600" height="1200" loading="lazy" decoding="async"></div>
       <div class="story__text">
         <h2 id="storyTitle">Câu chuyện Mộc Viên</h2>
         <span class="story__rule" id="storyRule"></span>
@@ -340,7 +340,7 @@ em.s, h2 em, h1 em{display:inline-block;font-family:var(--f-script);font-style:n
     </div>
     <p class="arch-hint" id="archHint">Cuộn xuống để bước qua ô cửa vòm và đi qua sáu không gian của ngôi nhà.<i></i></p>
     <div class="arch" id="arch">
-      <img src="assets/spaces-arch.webp" alt="Biệt thự Mộc Viên bên mặt hồ lúc hoàng hôn, các ô cửa vòm sáng ấm" width="2400" height="1350" loading="lazy" decoding="async">
+      <img src="assets/spaces-arch.webp?v=d46f7452" alt="Biệt thự Mộc Viên bên mặt hồ lúc hoàng hôn, các ô cửa vòm sáng ấm" width="2400" height="1350" loading="lazy" decoding="async">
       <div class="arch__dim" id="archDim"></div>
     </div>
     <p class="arch-cap" id="archCap">Mộc Viên lúc hoàng hôn</p>
@@ -351,27 +351,27 @@ em.s, h2 em, h1 em{display:inline-block;font-family:var(--f-script);font-style:n
       </div>
       <div class="rooms__track" id="roomsTrack">
         <figure class="room">
-          <div class="room__img"><img src="assets/room-1.webp" alt="Phòng khách thông tầng với cầu thang xoắn gỗ sồi và vách kính lớn" width="1200" height="1500" loading="lazy" decoding="async"></div>
+          <div class="room__img"><img src="assets/room-1.webp?v=a1f9b4c5" alt="Phòng khách thông tầng với cầu thang xoắn gỗ sồi và vách kính lớn" width="1200" height="1500" loading="lazy" decoding="async"></div>
           <figcaption><span class="room__no">01</span><span class="room__name">Sảnh thông tầng</span><span class="room__mat">Gỗ sồi · Travertine · Kính</span><span class="room__line">Nơi ánh sáng đi xuống theo từng bậc thang.</span></figcaption>
         </figure>
         <figure class="room">
-          <div class="room__img"><img src="assets/room-2.webp" alt="Bếp mở với bàn đảo đá travertine nguyên khối và tủ gỗ óc chó" width="1200" height="1500" loading="lazy" decoding="async"></div>
+          <div class="room__img"><img src="assets/room-2.webp?v=aa501f9a" alt="Bếp mở với bàn đảo đá travertine nguyên khối và tủ gỗ óc chó" width="1200" height="1500" loading="lazy" decoding="async"></div>
           <figcaption><span class="room__no">02</span><span class="room__name">Bếp & bàn đảo</span><span class="room__mat">Travertine · Óc chó · Đồng</span><span class="room__line">Một khối đá nguyên, một bữa sáng chậm.</span></figcaption>
         </figure>
         <figure class="room">
-          <div class="room__img"><img src="assets/room-3.webp" alt="Thư viện riêng với kệ gỗ óc chó kịch trần và ghế bành da" width="1200" height="1500" loading="lazy" decoding="async"></div>
+          <div class="room__img"><img src="assets/room-3.webp?v=3326bde5" alt="Thư viện riêng với kệ gỗ óc chó kịch trần và ghế bành da" width="1200" height="1500" loading="lazy" decoding="async"></div>
           <figcaption><span class="room__no">03</span><span class="room__name">Thư viện</span><span class="room__mat">Óc chó · Da · Đèn hắt</span><span class="room__line">Những buổi chiều dành cho trang sách.</span></figcaption>
         </figure>
         <figure class="room">
-          <div class="room__img"><img src="assets/room-4.webp" alt="Phòng ngủ master với giường gỗ sồi trắng, rèm lanh và cửa kính nhìn ra hồ" width="1200" height="1500" loading="lazy" decoding="async"></div>
+          <div class="room__img"><img src="assets/room-4.webp?v=43294d1a" alt="Phòng ngủ master với giường gỗ sồi trắng, rèm lanh và cửa kính nhìn ra hồ" width="1200" height="1500" loading="lazy" decoding="async"></div>
           <figcaption><span class="room__no">04</span><span class="room__name">Phòng ngủ master</span><span class="room__mat">Lanh · Sồi trắng · Tầm hồ</span><span class="room__line">Thức dậy cùng màn sương trên mặt hồ.</span></figcaption>
         </figure>
         <figure class="room">
-          <div class="room__img"><img src="assets/room-5.webp" alt="Phòng tắm spa với bồn tắm đá travertine nguyên khối và vòi đồng" width="1200" height="1500" loading="lazy" decoding="async"></div>
+          <div class="room__img"><img src="assets/room-5.webp?v=c27b73b9" alt="Phòng tắm spa với bồn tắm đá travertine nguyên khối và vòi đồng" width="1200" height="1500" loading="lazy" decoding="async"></div>
           <figcaption><span class="room__no">05</span><span class="room__name">Phòng tắm spa</span><span class="room__mat">Travertine · Đá đen · Đồng</span><span class="room__line">Bồn đá, ánh nến, và sự tĩnh lặng.</span></figcaption>
         </figure>
         <figure class="room">
-          <div class="room__img"><img src="assets/room-6.webp" alt="Hiên gỗ teak và hồ bơi tràn bờ nhìn ra hồ lúc hoàng hôn" width="1200" height="1500" loading="lazy" decoding="async"></div>
+          <div class="room__img"><img src="assets/room-6.webp?v=e11425fa" alt="Hiên gỗ teak và hồ bơi tràn bờ nhìn ra hồ lúc hoàng hôn" width="1200" height="1500" loading="lazy" decoding="async"></div>
           <figcaption><span class="room__no">06</span><span class="room__name">Hiên & hồ bơi</span><span class="room__mat">Teak · Đá tự nhiên · Hoàng hôn</span><span class="room__line">Mặt nước nối liền với mặt hồ phía xa.</span></figcaption>
         </figure>
       </div>
@@ -389,7 +389,7 @@ em.s, h2 em, h1 em{display:inline-block;font-family:var(--f-script);font-style:n
     </div>
     <div class="grid4" id="grid4">
       <a class="vcard" href="#invite">
-        <div class="vcard__img"><img src="assets/villa-1.webp" alt="Biệt thự đơn lập Ven Hồ với hiên gỗ chạy ra mặt nước" width="1200" height="900" loading="lazy" decoding="async"></div>
+        <div class="vcard__img"><img src="assets/villa-1.webp?v=a4596903" alt="Biệt thự đơn lập Ven Hồ với hiên gỗ chạy ra mặt nước" width="1200" height="900" loading="lazy" decoding="async"></div>
         <div class="vcard__body">
           <span class="vcard__kind">Biệt thự đơn lập</span>
           <h3 class="vcard__name">Ven Hồ</h3>
@@ -404,7 +404,7 @@ em.s, h2 em, h1 em{display:inline-block;font-family:var(--f-script);font-style:n
         </div>
       </a>
       <a class="vcard" href="#invite">
-        <div class="vcard__img"><img src="assets/villa-2.webp" alt="Biệt thự Tùng Lâm hai tầng vươn ra sườn đồi giữa rừng thông" width="1200" height="900" loading="lazy" decoding="async"></div>
+        <div class="vcard__img"><img src="assets/villa-2.webp?v=7630293a" alt="Biệt thự Tùng Lâm hai tầng vươn ra sườn đồi giữa rừng thông" width="1200" height="900" loading="lazy" decoding="async"></div>
         <div class="vcard__body">
           <span class="vcard__kind">Biệt thự sườn đồi</span>
           <h3 class="vcard__name">Tùng Lâm</h3>
@@ -419,7 +419,7 @@ em.s, h2 em, h1 em{display:inline-block;font-family:var(--f-script);font-style:n
         </div>
       </a>
       <a class="vcard" href="#invite">
-        <div class="vcard__img"><img src="assets/villa-3.webp" alt="Cặp biệt thự song lập Song Mộc đối xứng quanh một khu vườn" width="1200" height="900" loading="lazy" decoding="async"></div>
+        <div class="vcard__img"><img src="assets/villa-3.webp?v=4f7f001b" alt="Cặp biệt thự song lập Song Mộc đối xứng quanh một khu vườn" width="1200" height="900" loading="lazy" decoding="async"></div>
         <div class="vcard__body">
           <span class="vcard__kind">Biệt thự song lập</span>
           <h3 class="vcard__name">Song Mộc</h3>
@@ -434,7 +434,7 @@ em.s, h2 em, h1 em{display:inline-block;font-family:var(--f-script);font-style:n
         </div>
       </a>
       <a class="vcard" href="#invite">
-        <div class="vcard__img"><img src="assets/villa-4.webp" alt="Dinh thự Đại Viên với hành lang vòm và sân trong" width="1200" height="900" loading="lazy" decoding="async"></div>
+        <div class="vcard__img"><img src="assets/villa-4.webp?v=15a5552d" alt="Dinh thự Đại Viên với hành lang vòm và sân trong" width="1200" height="900" loading="lazy" decoding="async"></div>
         <div class="vcard__body">
           <span class="vcard__kind">Dinh thự</span>
           <h3 class="vcard__name">Đại Viên</h3>
@@ -452,7 +452,7 @@ em.s, h2 em, h1 em{display:inline-block;font-family:var(--f-script);font-style:n
     <p class="note">Giá minh hoạ cho dự án concept</p>
 
     <div class="banner" id="banner">
-      <div class="banner__img" id="bannerImg"><img src="assets/banner-plans.webp" alt="" width="2400" height="1030" loading="lazy" decoding="async"></div>
+      <div class="banner__img" id="bannerImg"><img src="assets/banner-plans.webp?v=31ac93db" alt="" width="2400" height="1030" loading="lazy" decoding="async"></div>
       <div class="banner__shade"></div>
       <div class="banner__in">
         <div>
@@ -475,7 +475,7 @@ em.s, h2 em, h1 em{display:inline-block;font-family:var(--f-script);font-style:n
         <h2 id="invTitle">Cần tư vấn<br>chọn căn phù hợp?</h2>
         <p>Để lại số điện thoại — chuyên viên của Mộc Viên sẽ gọi lại, giải đáp và sắp xếp một buổi tham quan nhà mẫu theo lịch của bạn.</p>
       </div>
-      <div class="invite__img"><img src="assets/invite-vase.webp" alt="" width="1800" height="1012" loading="lazy" decoding="async"></div>
+      <div class="invite__img"><img src="assets/invite-vase.webp?v=1b90b3bd" alt="" width="1800" height="1012" loading="lazy" decoding="async"></div>
       <form class="invite__form" id="leadForm" novalidate data-endpoint="">
         <label class="t" for="phone">Đặt lịch tham quan nhà mẫu</label>
         <div class="frow"><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Số điện thoại của bạn" required><button type="submit">Gửi yêu cầu</button></div>
