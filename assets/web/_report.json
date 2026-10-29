@@ -1,0 +1,133 @@
+{
+ "H1": {
+  "file": "hero.webp",
+  "size": [
+   2400,
+   1350
+  ],
+  "kb": 204,
+  "text_space_luma": 0.15
+ },
+ "H1M": {
+  "file": "hero-m.webp",
+  "size": [
+   1200,
+   1500
+  ],
+  "kb": 86,
+  "text_space_luma": 0.166
+ },
+ "S2": {
+  "file": "story-hands.webp",
+  "size": [
+   1600,
+   1200
+  ],
+  "kb": 82
+ },
+ "G0": {
+  "file": "spaces-arch.webp",
+  "size": [
+   2400,
+   1350
+  ],
+  "kb": 288
+ },
+ "G1": {
+  "file": "room-1.webp",
+  "size": [
+   1200,
+   1500
+  ],
+  "kb": 138
+ },
+ "G2": {
+  "file": "room-2.webp",
+  "size": [
+   1200,
+   1500
+  ],
+  "kb": 106
+ },
+ "G3": {
+  "file": "room-3.webp",
+  "size": [
+   1200,
+   1500
+  ],
+  "kb": 128
+ },
+ "G4": {
+  "file": "room-4.webp",
+  "size": [
+   1200,
+   1500
+  ],
+  "kb": 92
+ },
+ "G5": {
+  "file": "room-5.webp",
+  "size": [
+   1200,
+   1500
+  ],
+  "kb": 116
+ },
+ "G6": {
+  "file": "room-6.webp",
+  "size": [
+   1200,
+   1500
+  ],
+  "kb": 214
+ },
+ "V1": {
+  "file": "villa-1.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "kb": 137
+ },
+ "V2": {
+  "file": "villa-2.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "kb": 158
+ },
+ "V3": {
+  "file": "villa-3.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "kb": 126
+ },
+ "V4": {
+  "file": "villa-4.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "kb": 149
+ },
+ "B1": {
+  "file": "banner-plans.webp",
+  "size": [
+   2400,
+   1030
+  ],
+  "kb": 73,
+  "text_space_luma": 0.125
+ },
+ "F1": {
+  "file": "invite-vase.webp",
+  "size": [
+   1800,
+   1012
+  ],
+  "kb": 46
+ }
+}

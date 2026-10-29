@@ -1,0 +1,111 @@
+{
+  "_readme": "Toàn bộ chữ trên trang. Chuỗi có thể dùng {{ project.name_full }}, {{ contact.hotline }}... Thẻ <em> trong tiêu đề = chữ script Allura màu caramel (tối đa 1 cụm mỗi màn hình). Số liệu đánh dấu sample=true là số minh hoạ cho dự án concept.",
+
+  "meta": {
+    "title": "{{ project.name_full }} {{ project.suffix }} · {{ project.category }}",
+    "description": "{{ project.name_full }} — bộ sưu tập biệt thự đồi thông ven hồ, nơi gỗ, đá và ánh sáng định hình ngôi nhà. Đặt lịch tham quan nhà mẫu."
+  },
+
+  "nav": {
+    "links": [
+      { "label": "Trang chủ", "href": "#top", "active": true },
+      { "label": "Câu chuyện", "href": "#story" },
+      { "label": "Không gian", "href": "#spaces" },
+      { "label": "Dòng biệt thự", "href": "#collection" },
+      { "label": "Liên hệ", "href": "#invite" }
+    ],
+    "cta": "Đặt lịch tham quan"
+  },
+
+  "hero": {
+    "eyebrow": "{{ project.category }} · Bộ sưu tập {{ project.year }}",
+    "tagline": "Biệt thự nơi gỗ, đá và ánh sáng<br>định hình ngôi nhà của bạn",
+    "body": "Bốn mươi tám biệt thự trên sườn đồi thông, nhìn xuống mặt hồ. Kiến trúc trầm, vật liệu tự nhiên, nội thất hoàn thiện thủ công — từng chi tiết được chăm chút như một món đồ mộc.",
+    "cta": "Xem bộ sưu tập",
+    "cta_href": "#collection",
+    "features": [
+      { "icon": "leaf", "label": "Gỗ sồi & đá<br>travertine tự nhiên" },
+      { "icon": "pine", "label": "70% cây xanh<br>và mặt nước" },
+      { "icon": "key", "label": "Bàn giao nội thất<br>hoàn thiện thủ công" }
+    ],
+    "image": "H1",
+    "image_mobile": "H1M",
+    "alt": "Sảnh thông tầng với cầu thang xoắn gỗ sồi, nắng chiều chiếu qua vách kính nhìn ra rừng thông"
+  },
+
+  "story": {
+    "title": "Câu chuyện {{ project.name_full }}",
+    "body": "{{ project.name_full }} bắt đầu từ một ý nghĩ giản dị: ngôi nhà đẹp nhất là ngôi nhà được làm bằng tay. Mỗi tay vịn, mỗi bậc cầu thang, mỗi cánh cửa đều do nghệ nhân mộc hoàn thiện — để kiến trúc không chỉ được nhìn, mà còn được chạm vào.",
+    "image": "S2",
+    "alt": "Bàn tay nghệ nhân đang chà nhẵn đường cong của tay vịn gỗ sồi",
+    "stats": [
+      { "value": "48", "suffix": "", "label": "biệt thự<br>số lượng giới hạn", "sample": true },
+      { "value": "12", "suffix": " ha", "label": "quy mô<br>khu đồi thông", "sample": true },
+      { "value": "18", "suffix": "%", "label": "mật độ<br>xây dựng", "sample": true },
+      { "value": "70", "suffix": "%", "label": "cây xanh<br>và mặt nước", "sample": true }
+    ]
+  },
+
+  "spaces": {
+    "arch_eyebrow": "Bộ sưu tập không gian",
+    "arch_title": "Bước vào<br>một ngôi nhà<br><em>biết thở</em>",
+    "arch_image": "G0",
+    "arch_alt": "Biệt thự Mộc Viên bên mặt hồ lúc hoàng hôn, các ô cửa vòm sáng ấm",
+    "arch_caption": "{{ project.name_full }} lúc hoàng hôn",
+    "track_title": "Sáu không gian,<br>một nhịp sống",
+    "rooms": [
+      { "id": "G1", "name": "Sảnh thông tầng", "materials": "Gỗ sồi · Travertine · Kính", "line": "Nơi ánh sáng đi xuống theo từng bậc thang.", "alt": "Phòng khách thông tầng với cầu thang xoắn gỗ sồi và vách kính lớn" },
+      { "id": "G2", "name": "Bếp & bàn đảo", "materials": "Travertine · Óc chó · Đồng", "line": "Một khối đá nguyên, một bữa sáng chậm.", "alt": "Bếp mở với bàn đảo đá travertine nguyên khối và tủ gỗ óc chó" },
+      { "id": "G3", "name": "Thư viện", "materials": "Óc chó · Da · Đèn hắt", "line": "Những buổi chiều dành cho trang sách.", "alt": "Thư viện riêng với kệ gỗ óc chó kịch trần và ghế bành da" },
+      { "id": "G4", "name": "Phòng ngủ master", "materials": "Lanh · Sồi trắng · Tầm hồ", "line": "Thức dậy cùng màn sương trên mặt hồ.", "alt": "Phòng ngủ master với giường gỗ sồi trắng, rèm lanh và cửa kính nhìn ra hồ" },
+      { "id": "G5", "name": "Phòng tắm spa", "materials": "Travertine · Đá đen · Đồng", "line": "Bồn đá, ánh nến, và sự tĩnh lặng.", "alt": "Phòng tắm spa với bồn tắm đá travertine nguyên khối và vòi đồng" },
+      { "id": "G6", "name": "Hiên & hồ bơi", "materials": "Teak · Đá tự nhiên · Hoàng hôn", "line": "Mặt nước nối liền với mặt hồ phía xa.", "alt": "Hiên gỗ teak và hồ bơi tràn bờ nhìn ra hồ lúc hoàng hôn" }
+    ]
+  },
+
+  "collection": {
+    "title": "Dòng biệt thự",
+    "link": "Xem mặt bằng chi tiết",
+    "price_note": "Giá minh hoạ cho dự án concept",
+    "items": [
+      { "id": "V1", "kind": "Biệt thự đơn lập", "name": "Ven Hồ", "spec": "1–2 tầng · 420–520 m² đất · Bến gỗ riêng", "price": "từ 38 tỷ", "alt": "Biệt thự đơn lập Ven Hồ với hiên gỗ chạy ra mặt nước" },
+      { "id": "V2", "kind": "Biệt thự sườn đồi", "name": "Tùng Lâm", "spec": "2 tầng · 380–460 m² đất · Hiên treo", "price": "từ 32 tỷ", "alt": "Biệt thự Tùng Lâm hai tầng vươn ra sườn đồi giữa rừng thông" },
+      { "id": "V3", "kind": "Biệt thự song lập", "name": "Song Mộc", "spec": "2 tầng · 260–300 m² đất · Vườn chung", "price": "từ 24 tỷ", "alt": "Cặp biệt thự song lập Song Mộc đối xứng quanh một khu vườn" },
+      { "id": "V4", "kind": "Dinh thự", "name": "Đại Viên", "spec": "2 tầng · 900+ m² đất · Sân trong & loggia", "price": "từ 85 tỷ", "alt": "Dinh thự Đại Viên với hành lang vòm và sân trong" }
+    ],
+    "banner": {
+      "title": "Hoàn thiện theo<br><em>dấu ấn</em> riêng",
+      "body": "Chọn gỗ, chọn đá, chọn cách ánh sáng đi vào ngôi nhà. Đội ngũ kiến trúc sư đồng hành cùng bạn từ bản vẽ đến ngày nhận chìa khoá.",
+      "cta": "Nhận tư vấn thiết kế",
+      "image": "B1",
+      "steps": [
+        { "icon": "compass", "label": "Khảo sát &<br>tư vấn riêng" },
+        { "icon": "cube", "label": "Phối cảnh 3D<br>nội thất" },
+        { "icon": "keys", "label": "Bàn giao<br>trọn gói" }
+      ]
+    }
+  },
+
+  "invite": {
+    "title": "Cần tư vấn<br>chọn căn phù hợp?",
+    "body": "Để lại số điện thoại — chuyên viên của {{ project.name_full }} sẽ gọi lại, giải đáp và sắp xếp một buổi tham quan nhà mẫu theo lịch của bạn.",
+    "image": "F1",
+    "form_label": "Đặt lịch tham quan nhà mẫu",
+    "placeholder": "Số điện thoại của bạn",
+    "button": "Gửi yêu cầu",
+    "consent": "Tôi đồng ý để {{ project.name_full }} liên hệ theo số điện thoại trên",
+    "success": "Cảm ơn bạn. Chúng tôi sẽ gọi lại trong giờ làm việc.",
+    "error_phone": "Số điện thoại chưa đúng định dạng."
+  },
+
+  "footer": {
+    "about": "Bộ sưu tập biệt thự đồi thông ven hồ — kiến trúc trầm, vật liệu tự nhiên, nội thất hoàn thiện thủ công.",
+    "columns": [
+      { "title": "Dòng biệt thự", "links": ["Ven Hồ", "Tùng Lâm", "Song Mộc", "Đại Viên"] },
+      { "title": "Khách hàng", "links": ["Hoàn thiện riêng", "Vật liệu & hoàn thiện", "Chính sách bàn giao", "Câu hỏi thường gặp"] },
+      { "title": "{{ project.name_full }}", "links": ["Câu chuyện", "Không gian", "Nhà mẫu", "Liên hệ"] }
+    ],
+    "callback": "Gọi lại cho tôi",
+    "copyright": "© {{ project.year }} {{ project.name_full }} {{ project.suffix }}"
+  }
+}
