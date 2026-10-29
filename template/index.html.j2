@@ -51,7 +51,7 @@
 html{background:var(--cream);-webkit-text-size-adjust:100%}
 html.lenis,html.lenis body{height:auto}
 .lenis.lenis-smooth{scroll-behavior:auto!important}
-body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 button,input{font:inherit;color:inherit}
@@ -177,18 +177,22 @@ em.s, h2 em, h1 em{display:inline-block;font-family:var(--f-script);font-style:n
 .rooms__bar{position:relative;height:1px;background:rgba(243,236,228,.25);opacity:0}
 .rooms__bar i{position:absolute;inset:0;background:var(--caramel);transform-origin:left;transform:scaleX(0)}
 @media (max-width:767px){
-  .spaces__stage{height:auto;min-height:0;overflow:visible;padding-top:20px}
-  .arch-copy,.arch-hint{position:static;transform:none;width:auto;padding:0 var(--gut)}
+  .spaces__stage{height:100vh;height:100svh;min-height:620px;overflow:hidden}
+  .arch-copy{left:var(--gut);right:var(--gut);top:86px;transform:none;width:auto;text-align:center}
+  .arch-copy .eyebrow{margin-bottom:10px;font-size:10.5px}
+  .arch-copy h2{font-size:clamp(30px,8vw,40px)}
   .arch-hint{display:none}
-  .arch{position:relative;height:78vh;margin:28px 0 0;clip-path:inset(0 10% 0 10% round 400px 400px 22px 22px)}
-  .arch-cap{display:none}
-  .rooms{position:static;padding:56px 0 0;background:var(--espresso)}
-  .rooms__head{opacity:1;padding:0 var(--gut) 8px}
-  .rooms__track{overflow-x:auto;scroll-snap-type:x mandatory;padding:8px var(--gut) 56px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-  .rooms__track::-webkit-scrollbar{display:none}
-  .room{flex-basis:78vw;scroll-snap-align:center}
-  .room__img{max-height:none}
-  .rooms__bar{display:none}
+  .arch{clip-path:inset(30% 9% 6% 9% round 320px 320px 22px 22px)}
+  .arch-cap{left:0;right:0;bottom:26px;text-align:center;font-size:11px}
+  .rooms{gap:16px;padding-top:64px;padding-bottom:14px}
+  .rooms__head h2{font-size:clamp(24px,6.4vw,32px)}
+  .rooms__count{font-size:15px}
+  .rooms__count b{font-size:32px}
+  .rooms__track{gap:16px;padding-left:var(--gut);padding-right:var(--gut)}
+  .room{flex:0 0 clamp(256px,76vw,320px)}
+  .room__img{max-height:44svh}
+  .room figcaption{padding:12px 6px 14px}
+  .room__name{font-size:20px}
 }
 
 /* ============ S4 · COLLECTION ============ */
@@ -196,13 +200,15 @@ em.s, h2 em, h1 em{display:inline-block;font-family:var(--f-script);font-style:n
 .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:28px}
 .sec-head h2{font-size:clamp(32px,3vw,44px)}
 .grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
-.vcard{display:flex;flex-direction:column;border-radius:var(--r-lg);overflow:hidden;background:var(--card);box-shadow:var(--shadow);transition:transform .7s var(--ease),box-shadow .7s var(--ease)}
+.vcard{display:flex;flex-direction:column;border-radius:var(--r-lg);overflow:hidden;background:var(--card);border:1px solid rgba(236,226,216,.7);box-shadow:var(--shadow);transition:transform .7s var(--ease),box-shadow .7s var(--ease)}
 .vcard:hover{transform:translateY(-6px);box-shadow:0 40px 70px -34px rgba(42,31,23,.42)}
 .vcard__img{aspect-ratio:4/3;overflow:hidden;background:#3a2c21}
 .vcard__img img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
 .vcard:hover .vcard__img img{transform:scale(1.06)}
 .vcard__body{display:flex;flex-direction:column;flex:1;padding:20px 22px 22px}
+.vcard__top{display:flex;justify-content:space-between;align-items:center;gap:8px}
 .vcard__kind{display:block;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--caramel-deep);line-height:1.3}
+.vcard__idx{font-family:var(--f-display);font-size:13px;color:var(--ink-soft);opacity:.65}
 .vcard__name{margin:6px 0 0;font-family:var(--f-display);font-size:clamp(24px,2.1vw,28px);font-weight:400;line-height:1.18;letter-spacing:-.01em;color:var(--ink)}
 .vcard__spec{display:flex;flex-direction:column;gap:4px;margin-top:12px;font-size:13px;line-height:1.5;color:var(--ink-soft)}
 .vcard__spec span{display:block;white-space:nowrap}
@@ -226,7 +232,15 @@ em.s, h2 em, h1 em{display:inline-block;font-family:var(--f-script);font-style:n
 .steps .ic{font-size:44px;color:var(--caramel);stroke-width:1}
 @media (max-width:1100px){ .grid4{grid-template-columns:repeat(2,minmax(0,1fr))} }
 @media (max-width:860px){ .banner__in{grid-template-columns:1fr} .steps{justify-content:flex-start} }
-@media (max-width:560px){ .grid4{grid-template-columns:1fr} .sec-head{flex-direction:column;align-items:flex-start;gap:10px} .steps{gap:18px} .steps .ic{font-size:36px} }
+@media (max-width:767px){
+  .sec-head{flex-direction:column;align-items:flex-start;gap:10px}
+  .grid4{display:flex;flex-direction:column;gap:28px;position:relative;padding-bottom:16px}
+  .vcard{position:sticky;top:calc(82px + var(--stack-i,0) * 14px);z-index:calc(1 + var(--stack-i,0));transform-origin:50% 0%;will-change:transform;transition:none;box-shadow:0 -12px 34px -14px rgba(32,22,14,.22),var(--shadow)}
+  .vcard:hover{transform:none}
+  .vcard__img{aspect-ratio:16/10}
+  .vcard__img img{transition:none}
+}
+@media (max-width:560px){ .steps{gap:18px} .steps .ic{font-size:36px} }
 
 /* ============ S5 · INVITE ============ */
 .invite{position:relative;margin-top:clamp(64px,7vw,96px);background:linear-gradient(180deg,var(--cream) 0 62%,var(--footer) 62% 100%)}
@@ -393,10 +407,13 @@ em.s, h2 em, h1 em{display:inline-block;font-family:var(--f-script);font-style:n
     <div class="grid4" id="grid4">
       {%- for v in c.collection['items'] %}
       {%- set sp = v.spec.split('·') %}
-      <a class="vcard" href="#invite">
+      <a class="vcard" href="#invite" style="--stack-i:{{ loop.index0 }}">
         <div class="vcard__img"><img src="{{ img[v.id] }}" alt="{{ v.alt }}" width="1200" height="900" loading="lazy" decoding="async"></div>
         <div class="vcard__body">
-          <span class="vcard__kind">{{ v.kind }}</span>
+          <div class="vcard__top">
+            <span class="vcard__kind">{{ v.kind }}</span>
+            <span class="vcard__idx">{{ '%02d' % loop.index }} / {{ '%02d' % (c.collection['items']|length) }}</span>
+          </div>
           <h3 class="vcard__name">{{ v.name }}</h3>
           <div class="vcard__spec">
             {%- if sp|length >= 3 %}
@@ -559,38 +576,70 @@ $$('[data-count]').forEach(el => {
     onEnter: () => gsap.to(o, { v: to, duration: 1.8, delay: .7, ease: 'power2.out', onUpdate: () => el.textContent = Math.round(o.v) }) });
 });
 
-/* S3 · Không gian — ô cửa vòm mở ra toàn cảnh, rồi đi qua sáu căn phòng */
+/* S3 · Không gian — ô cửa vòm mở ra toàn cảnh, rồi đi qua sáu căn phòng (cả Desktop & Mobile G1) */
 const mm = gsap.matchMedia();
-mm.add('(min-width: 768px)', () => {
+mm.add({ isDesk: '(min-width: 768px)', isMob: '(max-width: 767px)' }, ctx => {
+  const { isMob } = ctx.conditions;
   const track = $('#roomsTrack'), rooms = $$('.room', track), n = rooms.length;
-  const dist = () => Math.max(0, track.scrollWidth - innerWidth + parseFloat(getComputedStyle(track).paddingLeft));
+  const pad = () => parseFloat(getComputedStyle(track).paddingLeft) || 20;
+  const dist = () => Math.max(0, track.scrollWidth - innerWidth + pad() * (isMob ? 2 : 1));
   let cur = -1;
+  const startClip = isMob
+    ? 'inset(30% 9% 6% 9% round 320px 320px 22px 22px)'
+    : 'inset(15% 36.5% 9% 36.5% round 600px 600px 26px 26px)';
   const tl = gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: {
-    trigger: '#stage', pin: true, start: 'top top', end: () => '+=' + (innerHeight * 1.3 + dist()), scrub: .8, invalidateOnRefresh: true,
+    trigger: '#stage', pin: true, start: 'top top',
+    end: () => '+=' + (innerHeight * (isMob ? 0.95 : 1.3) + dist()),
+    scrub: isMob ? .5 : .8, invalidateOnRefresh: true,
     onUpdate: s => {
-      const p = gsap.utils.clamp(0, 1, (s.progress - .34) / .66);
+      const p = gsap.utils.clamp(0, 1, (s.progress - .32) / .68);
       const i = Math.min(n - 1, Math.round(p * (n - 1)));
       if (i !== cur) { cur = i; $('#roomNo').textContent = String(i + 1).padStart(2, '0'); }
     } } });
-  tl.fromTo('#arch', { clipPath: 'inset(15% 36.5% 9% 36.5% round 600px 600px 26px 26px)' }, { clipPath: 'inset(0% 0% 0% 0% round 0px 0px 0px 0px)', duration: .3 }, 0)
-    .fromTo('#arch img', { scale: 1.25 }, { scale: 1, duration: .3 }, 0)
-    .to(['#archCopy', '#archHint'], { autoAlpha: 0, y: -30, duration: .12 }, .04)
-    .to('#archCap', { autoAlpha: 1, duration: .06 }, .24)
-    .to('#archDim', { opacity: 1, duration: .1 }, .3)
-    .to('#archCap', { autoAlpha: 0, duration: .05 }, .34)
-    .to(['#roomsHead', '#roomsBar'], { autoAlpha: 1, duration: .06 }, .33)
-    .fromTo(track, { x: () => innerWidth }, { x: () => -dist(), duration: .66 }, .34)
-    .to('#roomsBar i', { scaleX: 1, duration: .66 }, .34)
-    .to('#arch img', { xPercent: -6, scale: 1.13, duration: .66 }, .34); /* phóng nhẹ khi trôi để mép phải không lộ nền */
-  rooms.forEach((r, i) => tl.from(r, { y: 50, rotate: 1.5, duration: .08, ease: 'power2.out' }, .34 + i * .06));
-});
-mm.add('(max-width: 767px)', () => {
-  gsap.fromTo('#arch', { clipPath: 'inset(0% 18% 0% 18% round 400px 400px 22px 22px)' }, { clipPath: 'inset(0% 0% 0% 0% round 0px 0px 0px 0px)', ease: 'none',
-    scrollTrigger: { trigger: '#arch', start: 'top 85%', end: 'bottom 70%', scrub: .6 } });
-});
+  tl.fromTo('#arch', { clipPath: startClip }, { clipPath: 'inset(0% 0% 0% 0% round 0px 0px 0px 0px)', duration: .28 }, 0)
+    .fromTo('#arch img', { scale: 1.24 }, { scale: 1, duration: .28 }, 0)
+    .to(['#archCopy', '#archHint'], { autoAlpha: 0, y: -26, duration: .12 }, .04)
+    .to('#archCap', { autoAlpha: 1, duration: .06 }, .22)
+    .to('#archDim', { opacity: 1, duration: .1 }, .28)
+    .to('#archCap', { autoAlpha: 0, duration: .05 }, .32)
+    .to(['#roomsHead', '#roomsBar'], { autoAlpha: 1, duration: .06 }, .31)
+    .fromTo(track, { x: () => innerWidth * 1.02 }, { x: () => -dist(), duration: .68 }, .32)
+    .to('#roomsBar i', { scaleX: 1, duration: .68 }, .32)
+    .to('#arch img', { xPercent: -6, scale: 1.13, duration: .68 }, .32);
+  rooms.forEach((r, i) => tl.from(r, { y: isMob ? 34 : 50, rotate: 1.5, duration: .08, ease: 'power2.out' }, .32 + i * .06));
 
-/* S4 · Lựa chọn — thẻ biệt thự nổi lên như được xếp lên bàn; banner bản vẽ trôi chậm, icon tự vẽ nét */
-gsap.from('.vcard', { y: 70, autoAlpha: 0, duration: 1.1, stagger: .1, ease: 'power3.out', scrollTrigger: { trigger: '#grid4', start: 'top 82%', once: true } });
+  /* S4 · Lựa chọn — Desktop: xếp lên bàn; Mobile (V1): Sticky Stacking Cards */
+  const vcards = $$('.vcard');
+  if (!isMob) {
+    gsap.from(vcards, { y: 70, autoAlpha: 0, duration: 1.1, stagger: .1, ease: 'power3.out', scrollTrigger: { trigger: '#grid4', start: 'top 82%', once: true } });
+  } else {
+    vcards.forEach((card, i) => {
+      const img = $('.vcard__img img', card);
+      if (img) {
+        gsap.fromTo(img, { scale: 1.12 }, { scale: 1, ease: 'none',
+          scrollTrigger: { trigger: card, start: 'top 95%', end: 'top 35%', scrub: true } });
+      }
+      const next = vcards[i + 1];
+      if (next) {
+        const targetScale = 1 - (vcards.length - 1 - i) * 0.026;
+        gsap.fromTo(card,
+          { scale: 1, filter: 'brightness(1)' },
+          {
+            scale: targetScale,
+            filter: 'brightness(0.93)',
+            ease: 'none',
+            scrollTrigger: {
+              trigger: next,
+              start: 'top 62%',
+              end: () => 'top ' + (82 + (i + 1) * 14) + 'px',
+              scrub: true
+            }
+          }
+        );
+      }
+    });
+  }
+});
 gsap.fromTo('#bannerImg', { yPercent: -8 }, { yPercent: 8, ease: 'none', scrollTrigger: { trigger: '#banner', start: 'top bottom', end: 'bottom top', scrub: true } });
 const paths = $$('#steps path, #steps circle');
 paths.forEach(p => { const L = p.getTotalLength ? p.getTotalLength() : 100; p.style.strokeDasharray = L; p.style.strokeDashoffset = L; });
